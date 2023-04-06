@@ -1,0 +1,12 @@
+body {
+  background-color: bisque;
+}
+
+.hello {
+  color: red;
+  background: url('./logo.png');
+}
+
+.hello:hover {
+  color: blue;
+}
