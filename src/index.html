@@ -6,7 +6,7 @@
     <title>To Do List - WebPack</title>
     <link rel="icon" type="image/png" href="./logo.png"/>
     <script src="https://kit.fontawesome.com/3848942bcd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap" rel="stylesheet">
@@ -19,18 +19,25 @@
         <span><i class="fa-solid fa-arrows-rotate"></i></span>
       </header>
       <div class="todo-form">
-        <form >
+        <form id="frm-task">
           <input id="new-task" type="text" placeholder="Add to your list ...">
           <i class="fa-regular fa-square-check"></i>        
         </form>
-        <ul>
-          <li>
-            <input name="complete" type="checkbox">
-            <input name="txt-task" type="text" value="Sacar al perro">
-            <button class="btn-remove"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        <ul id="ul-tasks">
+          <li class="li-task">
+            <input class="complete" name="complete" type="checkbox">
+            <input class="txt-task" name="txt-task" type="text" value="Sacar al perro">
+            <button class="btn-drag"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            <button class="btn-remove"><i class="fa-regular fa-trash-can"></i></button>
+          </li>
+          <li class="li-task">
+            <input class="complete" name="complete" type="checkbox">
+            <input class="txt-task" name="txt-task" type="text" value="Buscar y reemplazar">
+            <button class="btn-drag"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            <button class="btn-remove"><i class="fa-regular fa-trash-can"></i></button>
           </li>
         </ul>
-        
+        <button id="btn-clear">Clear all completed</button>
       </div>
     </div>
   </main>
