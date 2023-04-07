@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Exercise</title>
+    <title>To Do List - WebPack</title>
+    <link rel="icon" type="image/png" href="./logo.png"/>
+    <script src="https://kit.fontawesome.com/3848942bcd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello webpack!</h1>
-    <h2>My name is Larry</h2>
+  <main>
+    <div id="container">
+      <header>
+        <h1>Today's To Do</h1>
+        <span><i class="fa-solid fa-arrows-rotate"></i></span>
+      </header>
+      <div class="todo-form">
+        <form >
+          <input id="new-task" type="text" placeholder="Add to your list ...">
+          <i class="fa-regular fa-square-check"></i>        
+        </form>
+        <ul>
+          <li>
+            <input name="complete" type="checkbox">
+            <input name="txt-task" type="text" value="Sacar al perro">
+            <button class="btn-remove"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </main>
+
+
+
+   
 </body>
 </html>
