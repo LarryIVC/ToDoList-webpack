@@ -6,8 +6,8 @@
 }
 
 body {
-  font-size: 16px;  
-  background-color:rgb(216, 227, 236);
+  font-size: 16px;
+  background-color: rgb(216, 227, 236);
 }
 
 ul {
@@ -28,19 +28,22 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 
 #container {
   max-width: 400px;
   width: 100%;
   height: auto;
-  background-color: #FFF;
+  background-color: #fff;
   border: 1px solid #989898;
+
   /* box-shadow: 5px 5px 5px #000000; */
   margin-top: 50px;
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(152, 152, 152,0.3),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3); 
+  box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(152, 152, 152, 0.3),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 header {
@@ -49,10 +52,10 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  border-bottom: #989898 solid 1px;  
+  border-bottom: #989898 solid 1px;
 }
 
-h1 {  
+h1 {
   font-size: 16px;
   font-weight: 700;
 }
@@ -68,12 +71,11 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: #989898 solid 1px; 
+  border-bottom: #989898 solid 1px;
 }
 
 #new-task {
   color: #989898;
-  
   width: 100%;
   padding: 5px;
 }
@@ -86,15 +88,14 @@ h1 {
 #ul-tasks {
   display: flex;
   flex-direction: column;
-
 }
 
 .li-task {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: #989898 solid 1px; 
-  padding: 5px;  
+  border-bottom: #989898 solid 1px;
+  padding: 5px;
 }
 
 .txt-task {
@@ -102,14 +103,14 @@ h1 {
   margin-left: 5px;
 }
 
-.btn-drag, 
+.btn-drag,
 .btn-remove {
   border: none;
   padding-right: 5px;
 }
 
-
-.fa-trash-can, .fa-ellipsis-vertical {  
+.fa-trash-can,
+.fa-ellipsis-vertical {
   color: #989898;
 }
 
