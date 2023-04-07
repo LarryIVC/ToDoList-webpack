@@ -27,7 +27,7 @@ const arrTasks = [
 function makeHtmlList() {
   let html = '';
   if (arrTasks.length === 0) {
-    return '<h2>';
+    return '<p class= "li-task">No tasks yet</p>';
   }
   for (let i = 0; i < arrTasks.length; i += 1) {
     html += `<li class="li-task">
