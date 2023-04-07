@@ -2,7 +2,7 @@
 
 <div align="center" style="text-align: center">
   <img src = "logo.png">  
-  <h1><b>To Do List - Minimalist :memo: :pencil:</b></h1>
+  <h1><b>To Do List - Minimalist :memo:</b></h1>
 </div>
 
 # 📗 Table of Contents 
