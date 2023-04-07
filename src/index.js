@@ -1,9 +1,9 @@
-import _ from "lodash";
-import "./style.css";
+// import _ from 'lodash';
+import './style.css';
 
-let arrTasks = [
+const arrTasks = [
   {
-    description: "Double-tap to edit",
+    description: 'Double-tap to edit',
     completed: false,
     index: 0,
   },
@@ -13,12 +13,12 @@ let arrTasks = [
     index: 1,
   },
   {
-    description: "Manage all your lists in one place",
+    description: 'Manage all your lists in one place',
     completed: true,
     index: 2,
   },
   {
-    description: "Resync to clear out the old",
+    description: 'Resync to clear out the old',
     completed: false,
     index: 3,
   },
@@ -26,26 +26,23 @@ let arrTasks = [
 
 function makeHtmlList() {
   let html = '';
-  if(arrTasks.length===0) {
-   return `<h2>` 
+  if (arrTasks.length === 0) {
+    return '<h2>';
   }
-  for (let i = 0; i < arrTasks.length; i++) {
-  
+  for (let i = 0; i < arrTasks.length; i += 1) {
     html += `<li class="li-task">
-            <input class="complete" name="complete" type="checkbox" ${arrTasks[i].completed?'checked':''} >
+            <input class="complete" name="complete" type="checkbox" ${arrTasks[i].completed ? 'checked' : ''} >
             <input class="txt-task" name="txt-task" type="text" value="${arrTasks[i].description}">
             <button class="btn-drag"><i class="fa-solid fa-ellipsis-vertical"></i></button>
             <button class="btn-remove"><i class="fa-regular fa-trash-can"></i></button>
-          </li>`
-    
+          </li>`;
   }
   return html;
 }
 
 function showTasks() {
-  const ulTasks = document.getElementById('ul-tasks')
+  const ulTasks = document.getElementById('ul-tasks');
   ulTasks.innerHTML = makeHtmlList();
-  console.log(ulTasks);
 }
 
 showTasks();
