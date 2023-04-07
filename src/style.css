@@ -1,12 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: bisque;
+  font-size: 16px;
+  font-family: 'Alkatra', cursive;
+  background-color:aliceblue;
+  align-items: center;
+  justify-content: center;
 }
 
-.hello {
-  color: red;
-  background: url('./logo.png');
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.hello:hover {
-  color: blue;
+#container {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  background-color: #FFF;
+  border: 1px solid #989898;
+  box-shadow: 5px 5px 5px #000000;
+}
+h1 {
+  color: #989898;
 }
