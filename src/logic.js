@@ -1,3 +1,4 @@
+import ClearAll from './ClearAll.js';
 import TaskManager from './TaskManager.js';
 
 const taskManager = new TaskManager();
@@ -8,20 +9,20 @@ export default function renderTasks() {
   taskList.innerHTML = '';
   taskManager.tasks.forEach((task, index) => {
     const listItem = document.createElement('li');
-    const checkbox = document.createElement('input');
-    listItem.classList.add('li-task');
-    checkbox.classList.add('complete');
-    checkbox.type = 'checkbox';
-    checkbox.checked = task.completed;
-    checkbox.addEventListener('click', () => {
-      toggleTask(index);
-    });
     const input = document.createElement('input');
     input.type = 'text';
     input.value = task.description;
     input.classList.add('txt-task');
     input.addEventListener('focusout', () => {
       updateTask(index, input);
+    });
+    const checkbox = document.createElement('input');
+    listItem.classList.add('li-task');
+    checkbox.classList.add('complete');
+    checkbox.type = 'checkbox';
+    checkbox.checked = task.completed;
+    checkbox.addEventListener('click', (item) => {      
+      toggleTask(index);      
     });
     const removeButton = document.createElement('button');
     const trash = document.createElement('i');
@@ -31,11 +32,17 @@ export default function renderTasks() {
     removeButton.addEventListener('click', () => {
       removeTask(index);
     });
+    if(task.completed) {
+      input.classList.add('completed');
+    } else 
+    {
+      input.classList.remove('completed');
+    }
     removeButton.appendChild(trash);
     listItem.appendChild(checkbox);
     listItem.appendChild(input);
     listItem.appendChild(removeButton);
-    taskList.appendChild(listItem);
+    taskList.appendChild(listItem);    
   });
 }
 
@@ -65,7 +72,7 @@ function updateTask(index, inputElement) {
 }
 
 function toggleTask(index){
-  taskManager.toggleTask(index);
+  taskManager.toggleTask(index);  
   renderTasks();
 }
 
@@ -74,3 +81,5 @@ myForm.addEventListener('submit', (e) => {
   e.preventDefault();
   addTask();
 });
+
+ClearAll(taskManager);
