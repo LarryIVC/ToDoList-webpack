@@ -1,8 +1,12 @@
 import TaskManager from './TaskManager.js';
 
 const taskManager = new TaskManager();
+addTask();
+removeTask(index);
+updateTask(index, inputElement);
+toggleTask(index);
 
-export function renderTasks() {
+export default function renderTasks() {
   const taskList = document.getElementById('ul-tasks');
   taskList.innerHTML = '';
   taskManager.tasks.forEach((task, index) => {
@@ -56,19 +60,17 @@ function removeTask(index) {
 
 function updateTask(index, inputElement) {
   const description = inputElement.value.trim();
-  if (description === "") {    
+  if (description === '') {
     return;
   }
   taskManager.updateTask(index, description);
   renderTasks();
 }
 
-function toggleTask(index) {
+function toggleTask(index){
   taskManager.toggleTask(index);
   renderTasks();
 }
-
-
 
 const myForm = document.getElementById('frm-task');
 myForm.addEventListener('submit', (e) => {
