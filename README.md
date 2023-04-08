@@ -133,11 +133,7 @@ Example command:
 
 We propose to implement:
 
-- Adding a new item.
-- Removing a selected item.
-- Marking a selected item as complete.
-- Removing all items marked as complete at once.
-- Reordering a selected item (as drag-and-drop) [as an additional feature].
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
