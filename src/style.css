@@ -109,7 +109,7 @@ h1 {
 }
 
 .completed {
-  text-decoration:line-through !important;
+  text-decoration: line-through !important;
   color: red !important;
 }
 
@@ -128,7 +128,7 @@ h1 {
 }
 
 #btn-clear:hover {
-  color:black;
+  color: black;
   background-color: #989898;
   transform: none;
 }
