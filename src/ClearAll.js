@@ -1,5 +1,5 @@
-import renderTasks from "./logic";
-
+import renderTasks from './logic.js';
+/* eslint-disable */
 export default function ClearAll(taskManager) {
   const bntClearAll = document.getElementById('btn-clear');
   bntClearAll.addEventListener('click', () => {
@@ -8,4 +8,3 @@ export default function ClearAll(taskManager) {
     renderTasks();
   });
 }
-
