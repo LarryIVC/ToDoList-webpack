@@ -1,11 +1,8 @@
 import TaskManager from './TaskManager.js';
 
 const taskManager = new TaskManager();
-addTask();
-removeTask(index);
-updateTask(index, inputElement);
-toggleTask(index);
 
+/* eslint-disable */
 export default function renderTasks() {
   const taskList = document.getElementById('ul-tasks');
   taskList.innerHTML = '';
