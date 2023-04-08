@@ -1,8 +1,8 @@
-import Task from "./Task.js";
+import Task from './Task.js';
 
 export default class TaskManager {
   constructor() {
-    this.tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    this.tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   }
 
   addTask(description) {
@@ -32,8 +32,7 @@ export default class TaskManager {
   }
 
   save() {
-    localStorage.setItem("tasks", JSON.stringify(this.tasks));
-    console.log(this.tasks);
+    localStorage.setItem('tasks', JSON.stringify(this.tasks));    
   }
 
   orderTasks() {
