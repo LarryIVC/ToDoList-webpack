@@ -1,39 +1,14 @@
 import TaskManager from './TaskManager.js';
+import {
+  addTask,
+  removeTask,
+  updateTask,
+  toggleTask,
+} from './TaskActions.js';
 import ClearAll from './ClearAll.js';
 
 const taskManager = new TaskManager();
 
-function addTask() {
-  const input = document.getElementById('new-task');
-  const description = input.value.trim();
-  if (description === '') {
-    return;
-  }
-  taskManager.addTask(description);
-  input.value = '';
-  renderTasks();
-}
-
-function removeTask(index) {
-  taskManager.removeTask(index);
-  renderTasks();
-}
-
-function updateTask(index, inputElement) {
-  const description = inputElement.value.trim();
-  if (description === '') {
-    return;
-  }
-
-  taskManager.updateTask(index, description);
-  renderTasks();
-}
-
-function toggleTask(index) {
-  taskManager.toggleTask(index);
-  renderTasks();
-}
-/* eslint-disable */
 export default function renderTasks() {
   const taskList = document.getElementById('ul-tasks');
   taskList.innerHTML = '';
@@ -44,7 +19,7 @@ export default function renderTasks() {
     input.value = task.description;
     input.classList.add('txt-task');
     input.addEventListener('focusout', () => {
-      updateTask(index, input);
+      updateTask(taskManager, renderTasks, index, input);
     });
 
     const checkbox = document.createElement('input');
@@ -53,7 +28,7 @@ export default function renderTasks() {
     checkbox.type = 'checkbox';
     checkbox.checked = task.completed;
     checkbox.addEventListener('click', () => {
-      toggleTask(index);
+      toggleTask(taskManager, renderTasks, index);
     });
 
     const removeButton = document.createElement('button');
@@ -62,7 +37,7 @@ export default function renderTasks() {
     trash.classList.add('fa-trash-can');
     removeButton.classList.add('btn-remove');
     removeButton.addEventListener('click', () => {
-      removeTask(index);
+      removeTask(taskManager, renderTasks, index);
     });
 
     if ( task.completed ) {
@@ -82,7 +57,7 @@ export default function renderTasks() {
 const myForm = document.getElementById('frm-task');
 myForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  addTask();
+  addTask(taskManager, renderTasks);
 });
 
 ClearAll(taskManager, renderTasks);
