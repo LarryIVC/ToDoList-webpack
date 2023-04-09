@@ -9,7 +9,7 @@ export function addTask() {
     return;
   }
   taskManager.addTask(description);
-  input.value = '';  
+  input.value = '';
 }
 
 export function updateTask(index, inputElement) {
