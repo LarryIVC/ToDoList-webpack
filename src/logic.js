@@ -31,12 +31,12 @@ export default function renderTasks() {
     removeButton.addEventListener('click', () => {
       removeTask(index);
     });
-    if(task.completed) {
+    if ( task.completed ) {
       input.classList.add('completed');
-    } else
-    {
+    } else {
       input.classList.remove('completed');
     }
+
     removeButton.appendChild(trash);
     listItem.appendChild(checkbox);
     listItem.appendChild(input);
@@ -71,7 +71,7 @@ function updateTask(index, inputElement) {
   renderTasks();
 }
 
-function toggleTask(index){
+function toggleTask(index) {
   taskManager.toggleTask(index);
   renderTasks();
 }
