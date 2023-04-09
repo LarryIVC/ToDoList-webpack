@@ -20,8 +20,8 @@ export default function renderTasks() {
     checkbox.classList.add('complete');
     checkbox.type = 'checkbox';
     checkbox.checked = task.completed;
-    checkbox.addEventListener('click', (item) => {      
-      toggleTask(index);      
+    checkbox.addEventListener('click', () => {
+      toggleTask(index);
     });
     const removeButton = document.createElement('button');
     const trash = document.createElement('i');
@@ -33,7 +33,7 @@ export default function renderTasks() {
     });
     if(task.completed) {
       input.classList.add('completed');
-    } else 
+    } else
     {
       input.classList.remove('completed');
     }
@@ -41,7 +41,7 @@ export default function renderTasks() {
     listItem.appendChild(checkbox);
     listItem.appendChild(input);
     listItem.appendChild(removeButton);
-    taskList.appendChild(listItem);    
+    taskList.appendChild(listItem);
   });
 }
 
@@ -66,12 +66,13 @@ function updateTask(index, inputElement) {
   if (description === '') {
     return;
   }
+
   taskManager.updateTask(index, description);
   renderTasks();
 }
 
 function toggleTask(index){
-  taskManager.toggleTask(index);  
+  taskManager.toggleTask(index);
   renderTasks();
 }
 
