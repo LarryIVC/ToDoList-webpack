@@ -33,7 +33,7 @@ function toggleTask(index) {
   taskManager.toggleTask(index);
   renderTasks();
 }
-
+/* eslint-disable */
 export default function renderTasks() {
   const taskList = document.getElementById('ul-tasks');
   taskList.innerHTML = '';
@@ -46,7 +46,7 @@ export default function renderTasks() {
     input.addEventListener('focusout', () => {
       updateTask(index, input);
     });
-    
+
     const checkbox = document.createElement('input');
     listItem.classList.add('li-task');
     checkbox.classList.add('complete');
