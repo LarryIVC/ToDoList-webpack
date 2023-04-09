@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 import renderTasks from './logic.js';
 
 export default function ClearAll(taskManager) {
