@@ -1,6 +1,11 @@
 import ClearAll from './ClearAll.js';
 import TaskManager from './TaskManager.js';
-import { addTask, removeTask, updateTask, toggleTask } from './link.js';
+import { 
+  addTask, 
+  removeTask, 
+  updateTask, 
+  toggleTask 
+} from './link.js';
 
 const taskManager = new TaskManager();
 const bntClearAll = document.getElementById('btn-clear');
