@@ -1,9 +1,9 @@
 
 import ClearAll from './ClearAll.js';
 import TaskManager from './TaskManager.js';
-
+import { addTask, removeTask, updateTask, toggleTask } from './link.js';
 const taskManager = new TaskManager();
-
+const bntClearAll = document.getElementById('btn-clear');
 
 export default function renderTasks() {
   const taskList = document.getElementById('ul-tasks');
@@ -16,6 +16,7 @@ export default function renderTasks() {
     input.classList.add('txt-task');
     input.addEventListener('focusout', () => {
       updateTask(index, input);
+      renderTasks();
     });
     const checkbox = document.createElement('input');
     listItem.classList.add('li-task');
@@ -23,7 +24,8 @@ export default function renderTasks() {
     checkbox.type = 'checkbox';
     checkbox.checked = task.completed;
     checkbox.addEventListener('click', () => {      
-      toggleTask(index);      
+      toggleTask(index);
+      renderTasks();      
     });
     const removeButton = document.createElement('button');
     const trash = document.createElement('i');
@@ -32,6 +34,7 @@ export default function renderTasks() {
     removeButton.classList.add('btn-remove');
     removeButton.addEventListener('click', () => {
       removeTask(index);
+      renderTasks();
     });
     if(task.completed) {
       input.classList.add('completed');
@@ -47,41 +50,14 @@ export default function renderTasks() {
   });
 }
 
-function addTask() {
-  const input = document.getElementById('new-task');
-  const description = input.value.trim();
-  if (description === '') {
-    return;
-  }
-  taskManager.addTask(description);
-  input.value = '';
-  renderTasks();
-}
-
-function removeTask(index) {
-  taskManager.removeTask(index);
-  renderTasks();
-}
-
-function updateTask(index, inputElement) {
-  const description = inputElement.value.trim();
-  if (description === '') {
-    return;
-  }
-  taskManager.updateTask(index, description);
-  renderTasks();
-}
-
-function toggleTask(index){
-  taskManager.toggleTask(index);  
-  renderTasks();
-}
-
 const myForm = document.getElementById('frm-task');
 myForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  addTask();
+  taskManager.tasks = addTask();
+  renderTasks();
 });
 
-ClearAll(taskManager);
-
+bntClearAll.addEventListener('click', () => {
+  ClearAll(taskManager);
+  renderTasks();    
+});
