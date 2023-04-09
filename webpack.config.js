@@ -2,10 +2,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  module: 'development',
+  mode: 'development',
   entry: {
     index: './src/index.js',
+    logic: './src/logic.js',
+    ClearAll: './scr/ClearAll.js',
+    TaskManager: './scr/TaskManager.js',
+    link: './scr/link.js',
+    Task: './scr/Task.js',
   },
+  devtool: 'inline-source-map',
   devServer: {
     static: './dist',
   },
@@ -28,10 +34,7 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
     ],
   },
 };
+
