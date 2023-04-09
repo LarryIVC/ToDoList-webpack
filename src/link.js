@@ -1,4 +1,5 @@
 import TaskManager from './TaskManager.js';
+
 const taskManager = new TaskManager();
 
 export function addTask() {
@@ -8,8 +9,7 @@ export function addTask() {
     return;
   }
   taskManager.addTask(description);
-  input.value = '';
-  return taskManager;
+  input.value = '';  
 }
 
 export function updateTask(index, inputElement) {
@@ -20,8 +20,8 @@ export function updateTask(index, inputElement) {
   taskManager.updateTask(index, description);
 }
 
-export function toggleTask(index){
-  taskManager.toggleTask(index);  
+export function toggleTask(index) {
+  taskManager.toggleTask(index);
 }
 
 export function removeTask(index) {
