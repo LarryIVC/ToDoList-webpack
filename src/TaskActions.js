@@ -29,7 +29,8 @@ function toggleTask(taskManager, renderTasks, index) {
   renderTasks();
 }
 
-export { addTask,
+export {
+  addTask,
   removeTask,
   updateTask,
   toggleTask,
