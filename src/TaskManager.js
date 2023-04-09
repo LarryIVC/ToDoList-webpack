@@ -1,5 +1,4 @@
 import Task from './Task.js';
-
 export default class TaskManager {
   constructor() {
     this.tasks = JSON.parse(localStorage.getItem('tasks')) || [];
