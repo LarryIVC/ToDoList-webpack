@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 import ClearAll from './ClearAll.js';
 import TaskManager from './TaskManager.js';
 
@@ -22,7 +22,7 @@ export default function renderTasks() {
     checkbox.classList.add('complete');
     checkbox.type = 'checkbox';
     checkbox.checked = task.completed;
-    checkbox.addEventListener('click', (item) => {      
+    checkbox.addEventListener('click', () => {      
       toggleTask(index);      
     });
     const removeButton = document.createElement('button');
