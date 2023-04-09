@@ -40,7 +40,7 @@ export default function renderTasks() {
       removeTask(taskManager, renderTasks, index);
     });
 
-    if ( task.completed ) {
+    if (task.completed) {
       input.classList.add('completed');
     } else {
       input.classList.remove('completed');
