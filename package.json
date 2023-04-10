@@ -4,9 +4,11 @@
   "description": "installing webpack",
   "private": true,
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start": "webpack serve --open --mode development"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack --mode development",
+    "prod": "webpack --mode production"
   },
   "keywords": [],
   "author": "Larry Villegas <larry_villegas@gmail.com>",
@@ -21,6 +23,5 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
-  },
-  "main": "index.js"
+  }
 }
