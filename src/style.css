@@ -17,6 +17,13 @@ ul {
 button {
   cursor: pointer;
   border: none;
+  color: #989898;
+  transition: 300ms;
+}
+
+button:hover {
+  color: black;
+  transform: scale(1.1);
 }
 
 input {
@@ -101,15 +108,15 @@ h1 {
   margin-left: 5px;
 }
 
+.completed {
+  text-decoration: line-through !important;
+  color: red !important;
+}
+
 .btn-drag,
 .btn-remove {
   border: none;
   padding-right: 5px;
-}
-
-.fa-trash-can,
-.fa-ellipsis-vertical {
-  color: #989898;
 }
 
 #btn-clear {
@@ -118,4 +125,10 @@ h1 {
   color: #989898;
   padding: 10px;
   font-size: 18px;
+}
+
+#btn-clear:hover {
+  color: black;
+  background-color: #989898;
+  transform: none;
 }

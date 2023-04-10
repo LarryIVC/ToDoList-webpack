@@ -55,10 +55,9 @@
 
 **Enlist skill sets and tech stack**
 
-- Manage WebPack for Javascript
-- Manage content dinamycally
-- Introduce ES6 features
-
+- Manage WebPack for Javascript Modules
+- Manage User Interactive experience
+- Manage ES6 features
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
