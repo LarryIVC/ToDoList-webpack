@@ -63,8 +63,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-  Not implemented yet
-  <!-- <a href="">Click Me</a> -->
+  <a href="https://larryivc.github.io/ToDoList-webpack/">Click here</a> to view live version 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
