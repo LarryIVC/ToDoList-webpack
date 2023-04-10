@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack serve --open --mode development"
+    "start": "webpack serve --open --mode development",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Larry Villegas <larry_villegas@gmail.com>",
   "license": "MIT",
+  "homepage": "https://larryivc.github.io/ToDoList-webpack",
   "devDependencies": {
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
@@ -20,6 +22,7 @@
     "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "lodash": "^4.17.21"
   },
   "main": "index.js"
