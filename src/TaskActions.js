@@ -1,9 +1,14 @@
 function addTask(taskManager, renderTasks) {
   const input = document.getElementById('new-task');
+  if (!input) {
+    return;
+  }
+
   const description = input.value.trim();
   if (description === '') {
     return;
   }
+
   taskManager.addTask(description);
   input.value = '';
   renderTasks();
