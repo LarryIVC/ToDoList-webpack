@@ -1,21 +1,15 @@
 function addTask(taskManager, renderTasks) {
-  
-  /*const description = input.value.trim();
-  if (!description) return;
-
-  const task = taskManager.addTask(description);
-  renderTasks();
-  input.value = '';*/
-
 
   const input = document.getElementById('new-task');
   if (!input) {
     return;
   }
+
   const description = input.value.trim();
   if (description === '') {
     return;
   }
+
   taskManager.addTask(description);
   input.value = '';
   renderTasks();
