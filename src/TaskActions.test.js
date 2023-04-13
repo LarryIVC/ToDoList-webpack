@@ -2,7 +2,7 @@
 import TaskManager from './TaskManager.js';
 import {
   addTask,
-  removeTask 
+  removeTask,
 } from './TaskActions.js';
 // Import the 'jest-localstorage-mock' package to mock the localStorage API
 import 'jest-localstorage-mock';
@@ -27,13 +27,13 @@ describe('addTask & removeTask', () => {
     // Call addTask function
     addTask(taskManager, renderTasks);
 
-    // Assert that the new task has been added to the task manager, 
+    // Assert that the new task has been added to the task manager,
     // renderTasks function has been called and the tasks have been saved to localStorage
     expect(taskManager.tasks).toContainEqual({ index: expect.any(Number), description: 'Test task', completed: false });
     expect(renderTasks).toHaveBeenCalled();
     expect(localStorage.setItem).toHaveBeenCalledWith(
       'tasks',
-      JSON.stringify(taskManager.tasks)
+      JSON.stringify(taskManager.tasks),
     );
 
     // Clean up: remove input element from the document
