@@ -30,7 +30,7 @@
 
 # 📖 [To Do list minimalist] <a name="about-project"></a>
 
-**[To Do list minimalist]** Is a project about manage webpack on `JavaScript`
+**[To Do list minimalist]** Is a project about manage a minimalist To Do List on `JavaScript`
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -47,7 +47,8 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://webpack.js.org/">WebPack</a></li>   
+    <li><a href="https://webpack.js.org/">WebPack</a></li>
+    <li><a href="https://jestjs.io/">Jest</a></li>
   </ul>
 </details>
   
@@ -55,9 +56,7 @@
 
 **Enlist skill sets and tech stack**
 
-- Manage WebPack for Javascript Modules
-- Manage User Interactive experience
-- Manage ES6 features
+- Test Add and Remove with Jest
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,6 +116,18 @@ Example command:
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Oscar Villagran**
+
+- GitHub: [@oovillagran](https://github.com/oovillagran)
+- Twitter: [@oovillagran](https://twitter.com/oovillagran)
+- LinkedIn: [Oscar Villagran](https://www.linkedin.com/in/oovillagran/)
+
+👤 **Federica Ulzurrun**
+
+- GitHub: [@federicaulzurrun](https://github.com/federicaulzurrun)
+- Twitter: [@ulzurrunfede](https://mobile.twitter.com/ulzurrunfede)
+- LinkedIn: [Federica Ulzurrun](https://www.linkedin.com/in/federica-ulzurrun-293a86198)
+
 👤 **Larry Villegas**
 
 - GitHub: [@LarryIVC](https://github.com/LarryIVC)
@@ -131,7 +142,7 @@ Example command:
 
 We propose to implement:
 
-
+- Write unit tests for a JavaScript app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
