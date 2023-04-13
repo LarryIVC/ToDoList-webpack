@@ -14,8 +14,9 @@ describe('addTask & removeTask', () => {
     const input = document.createElement('input');
     input.id = 'new-task';
     input.value = 'Test task';
+    document.body.appendChild(input); 
 
-    addTask(taskManager, renderTasks, input);
+    addTask(taskManager, renderTasks);
 
     expect(taskManager.tasks).toContainEqual({ index: expect.any(Number), description: 'Test task', completed: false });
     expect(renderTasks).toHaveBeenCalled();
@@ -23,6 +24,8 @@ describe('addTask & removeTask', () => {
       'tasks',
       JSON.stringify(taskManager.tasks)
     );
+
+    document.body.removeChild(input);
   });
 
   test('removeTask should remove a task from the task manager', () => {

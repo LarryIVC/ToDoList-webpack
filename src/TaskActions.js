@@ -1,24 +1,14 @@
-function addTask(taskManager, renderTasks, input) {
-  /*const description = inputElement.value;
-  const task = {
-    id: taskManager.tasks.length,
-    description,
-    completed: false,
-  };
-  taskManager.addTask(task);
-  inputElement.value = '';
-  renderTasks();
-  localStorage.setItem('tasks', JSON.stringify(taskManager.tasks));*/
+function addTask(taskManager, renderTasks) {
   
-  const description = input.value.trim();
+  /*const description = input.value.trim();
   if (!description) return;
 
   const task = taskManager.addTask(description);
   renderTasks();
-  input.value = '';
+  input.value = '';*/
 
 
-  /*const input = document.getElementById('new-task');
+  const input = document.getElementById('new-task');
   if (!input) {
     return;
   }
@@ -28,7 +18,7 @@ function addTask(taskManager, renderTasks, input) {
   }
   taskManager.addTask(description);
   input.value = '';
-  renderTasks();*/
+  renderTasks();
 }
 
 function removeTask(taskManager, renderTasks, index) {
