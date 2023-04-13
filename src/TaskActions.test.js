@@ -1,6 +1,9 @@
 // Import TaskManager class and addTask and removeTask functions from TaskActions module
-import TaskManager from './TaskManager';
-import { addTask, removeTask } from './TaskActions';
+import TaskManager from './TaskManager.js';
+import {
+  addTask,
+  removeTask 
+} from './TaskActions.js';
 // Import the 'jest-localstorage-mock' package to mock the localStorage API
 import 'jest-localstorage-mock';
 
@@ -19,7 +22,7 @@ describe('addTask & removeTask', () => {
     const input = document.createElement('input');
     input.id = 'new-task';
     input.value = 'Test task';
-    document.body.appendChild(input); 
+    document.body.appendChild(input);
 
     // Call addTask function
     addTask(taskManager, renderTasks);
