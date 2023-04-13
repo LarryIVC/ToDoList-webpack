@@ -1,12 +1,34 @@
-function addTask(taskManager, renderTasks) {
-  const input = document.getElementById('new-task');
+function addTask(taskManager, renderTasks, input) {
+  /*const description = inputElement.value;
+  const task = {
+    id: taskManager.tasks.length,
+    description,
+    completed: false,
+  };
+  taskManager.addTask(task);
+  inputElement.value = '';
+  renderTasks();
+  localStorage.setItem('tasks', JSON.stringify(taskManager.tasks));*/
+  
+  const description = input.value.trim();
+  if (!description) return;
+
+  const task = taskManager.addTask(description);
+  renderTasks();
+  input.value = '';
+
+
+  /*const input = document.getElementById('new-task');
+  if (!input) {
+    return;
+  }
   const description = input.value.trim();
   if (description === '') {
     return;
   }
   taskManager.addTask(description);
   input.value = '';
-  renderTasks();
+  renderTasks();*/
 }
 
 function removeTask(taskManager, renderTasks, index) {
