@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681416705438" clover="3.2.0">
-  <project timestamp="1681416705438" name="All files">
+<coverage generated="1681417229255" clover="3.2.0">
+  <project timestamp="1681417229256" name="All files">
     <metrics statements="38" coveredstatements="20" conditionals="12" coveredconditionals="6" methods="12" coveredmethods="7" elements="62" coveredelements="33" complexity="0" loc="38" ncloc="38" packages="1" files="3" classes="3"/>
-    <file name="Task.js" path="C:\Users\oscar\repos\Module2\ToDoList-webpack\src\Task.js">
+    <file name="Task.js" path="/Users/federicaulzurrun/Documents/MICROVERSE/Module 2/testingLarry/ToDoList-webpack/src/Task.js">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
     </file>
-    <file name="TaskActions.js" path="C:\Users\oscar\repos\Module2\ToDoList-webpack\src\TaskActions.js">
+    <file name="TaskActions.js" path="/Users/federicaulzurrun/Documents/MICROVERSE/Module 2/testingLarry/ToDoList-webpack/src/TaskActions.js">
       <metrics statements="18" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="4" coveredmethods="2"/>
       <line num="11" count="2" type="stmt"/>
       <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
@@ -29,7 +29,7 @@
       <line num="40" count="0" type="stmt"/>
       <line num="41" count="0" type="stmt"/>
     </file>
-    <file name="TaskManager.js" path="C:\Users\oscar\repos\Module2\ToDoList-webpack\src\TaskManager.js">
+    <file name="TaskManager.js" path="/Users/federicaulzurrun/Documents/MICROVERSE/Module 2/testingLarry/ToDoList-webpack/src/TaskManager.js">
       <metrics statements="17" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="7" coveredmethods="4"/>
       <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="9" count="1" type="stmt"/>

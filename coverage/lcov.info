@@ -1,5 +1,5 @@
 TN:
-SF:src\Task.js
+SF:src/Task.js
 FN:2,(anonymous_0)
 FNF:1
 FNH:1
@@ -15,7 +15,7 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:src\TaskActions.js
+SF:src/TaskActions.js
 FN:1,addTask
 FN:24,removeTask
 FN:29,updateTask
@@ -56,7 +56,7 @@ BRF:6
 BRH:3
 end_of_record
 TN:
-SF:src\TaskManager.js
+SF:src/TaskManager.js
 FN:4,(anonymous_0)
 FN:8,(anonymous_1)
 FN:14,(anonymous_2)
