@@ -1,5 +1,4 @@
 function addTask(taskManager, renderTasks) {
-
   const input = document.getElementById('new-task');
   if (!input) {
     return;
