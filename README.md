@@ -56,7 +56,8 @@
 
 **Enlist skill sets and tech stack**
 
-- Test Add and Remove with Jest
+- Test Add and Remove with Jest.
+- Test UpdateTask, ToggleTask and ClearAll functions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,7 +143,7 @@ Example command:
 
 We propose to implement:
 
-- Write unit tests for a JavaScript app.
+- Launch the completed app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
