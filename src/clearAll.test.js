@@ -9,7 +9,7 @@ describe('ClearAll', () => {
   beforeEach(() => {
     // Set up mock TaskManager and renderTasks functions
     taskManager = new TaskManager();
-    taskManager.tasks = [      { description: 'Task 1', completed: true },      { description: 'Task 2', completed: false },      { description: 'Task 3', completed: true },    ];
+    taskManager.tasks = [ { description: 'Task 1', completed: true }, { description: 'Task 2', completed: false }, { description: 'Task 3', completed: true }, ];
     taskManager.save = jest.fn();
     renderTasks = jest.fn();
 
